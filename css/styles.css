@@ -1,0 +1,62 @@
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.custom-navbar{
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .15);
+    z-index: 1000;
+    position: fixed; /* Assurer que la barre est fixée en haut */
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar-collapse {
+    position: relative;
+  }
+  
+  @media (max-width: 992px) { /* Appliquer la règle uniquement en mode mobile */
+    .navbar-collapse {
+      position: absolute; /* Le menu déployé flotte au-dessus du contenu */
+      top: 100%; /* Ajustement en fonction de la hauteur de la navbar */
+      background-color: rgba(255, 255, 255, .15);
+      z-index: 1001; /* Plus élevé que le reste du contenu */
+    }
+  }
+
+.navbar-brand {
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+header{
+  background-size: cover;
+    width: auto;
+    height:600px;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+  color:white;
+  font-size: 50px;
+  text-shadow: 0px 0px 1px black;
+}
+
