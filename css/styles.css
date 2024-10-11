@@ -82,6 +82,13 @@ h2 {
   border-left: 8px solid #2f97e6;
 }
 
+.card{
+  text-align: center;
+  border-radius: 20px;
+  border-top:10px solid #2f97e6;
+  width: 80%;
+}
+
 p {
   margin-bottom: 30px;
 }
@@ -89,7 +96,7 @@ p {
 .img-intro {
   width: 400px;
   height: 500px;
-  /* box-shadow: 15px -15px 0px #ededed; */
+  border-radius: 20px;
 }
 
 .btn {
@@ -98,13 +105,28 @@ p {
   font-weight: bold;
 }
 
-#test {
-  background-image: url("../images/paysage.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 20px;
-  width: 100%;
-  height: 600px;
-  position: relative;
-  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+#background-wrapper {
+  background-image: url('../images/paysage.avif');
+  background-size: cover;          /* L'image couvre toute la largeur et hauteur */
+  background-position: center;     /* Centre l'image */
+  background-repeat: no-repeat;    /* Empêche la répétition de l'image */
+  background-attachment: fixed;    /* L'image reste fixe lors du défilement */
+  width: 100%;                     /* Largeur pleine page */
+  height: 100vh;                   /* Hauteur pleine fenêtre */
+  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); /* Découpe l'image en fonction du chemin défini */
+  display: flex;                  /* Active Flexbox pour centrer les cartes */
+  justify-content: center;        /* Centre horizontalement */
+  align-items: center;            /* Centre verticalement */
+}
+
+.card{
+  height: 350px;
+}
+
+.card-title{
+  padding-bottom: 20px;
+}
+
+.fa-solid{
+  font-size: 50px;
 }
