@@ -1,48 +1,26 @@
-/* Color of the links BEFORE scroll */
-.navbar-scroll .nav-link,
-.navbar-scroll .navbar-toggler-icon,
-.navbar-scroll .navbar-brand {
-  color: #fff;
-}
-
-/* Color of the links AFTER scroll */
-.navbar-scrolled .nav-link,
-.navbar-scrolled .navbar-toggler-icon,
-.navbar-scrolled .navbar-brand {
-  color: #fff;
-}
-
-/* Color of the navbar AFTER scroll */
-.navbar-scroll,
-.navbar-scrolled {
-  background-color: #cbbcb1;
-}
-
 .custom-navbar {
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, .15);
-  z-index: 1000;
+  background-color: white;
+  /* backdrop-filter: blur(5px); */
+  /* background-color: rgba(255, 255, 255, .15); */
   position: fixed;
-  /* Assurer que la barre est fixée en haut */
+  z-index: 1000;
   top: 0;
   width: 100%;
 }
 
 .navbar-collapse {
   position: relative;
+  margin-right: 5px
 }
 
 @media (max-width: 992px) {
 
-  /* Appliquer la règle uniquement en mode mobile */
   .navbar-collapse {
     position: absolute;
     /* Le menu déployé flotte au-dessus du contenu */
     top: 100%;
     /* Ajustement en fonction de la hauteur de la navbar */
-    background-color: rgba(255, 255, 255, .15);
-    z-index: 1000;
-    /* Plus élevé que le reste du contenu */
+    background-color: white;
   }
 }
 
@@ -51,24 +29,75 @@
   letter-spacing: 3px;
 }
 
-header {
+.navbar-toggler {
+  margin-right: 10px; /* Ajuste cette valeur selon l'espacement souhaité */
+}
+
+#background-hero {
   background-size: cover;
   background-attachment: fixed;
   width: auto;
-  height: 600px;
-  background-image: url("../images/header.jpg");
+  height: 800px;
+  background-image: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+  url("../images/header.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 100px;
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-family: "Roboto", sans-serif;
+.color-1{
+  color:#5e9693;
+}
+
+.color-2{
+  color:#2f97e6;
+}
+
+.green{
+  color:#5e9693;
+  text-shadow: 0px 0px 4px black; 
+}
+
+.blue{
+  color:#2f97e6;
+  text-shadow: 0px 0px 4px black ; 
+}
+
+#hero-main-title{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  color:white;
+}
+
+#hero-slogan{
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
   font-weight: 900;
-  color: white;
-  font-size: 50px;
-  text-shadow: 0px 0px 2px black;
+  color:white;
+  text-transform:uppercase;
+}
+
+#hero-slogan-secondary{
+font-family: "Montserrat", Sans-serif;
+font-size: 20px;
+font-weight: 600;
+line-height: 1.6em;
+color:white;
+}
+
+.img-hero{
+  width: 400px;
+  height: auto;
 }
 
 #intro {
@@ -76,16 +105,16 @@ h1 {
   margin-bottom: 100px;
 }
 
-h2 {
+#section-titles {
   margin-bottom: 30px;
   padding-left: 15px;
   border-left: 8px solid #2f97e6;
 }
 
-.card{
+.card {
   text-align: center;
   border-radius: 20px;
-  border-top:10px solid #2f97e6;
+  border-top: 10px solid #2f97e6;
   width: 80%;
 }
 
@@ -94,39 +123,255 @@ p {
 }
 
 .img-intro {
-  width: 400px;
+  width: auto;
   height: 500px;
   border-radius: 20px;
 }
 
-.btn {
-  background-color: #2f97e6;
-  color: white;
-  font-weight: bold;
+@media (max-width: 992px) {
+ 
+  #hero-slogan{
+  font-size: 36px;
+  }
+  
+  .green{
+    color:#5e9693;
+    text-shadow: none; 
+  }
+  
+  .blue{
+    color:#2f97e6;
+    text-shadow: none ; 
+  }
+
+  .img-hero{
+    width: 250px;
+    height: auto;
+  }
+
+  .img-intro {
+    margin-top: 50px;
+    height: 400px;
+  }
 }
 
-#background-wrapper {
+
+#background-cards {
   background-image: url('../images/paysage.avif');
-  background-size: cover;          /* L'image couvre toute la largeur et hauteur */
-  background-position: center;     /* Centre l'image */
-  background-repeat: no-repeat;    /* Empêche la répétition de l'image */
-  background-attachment: fixed;    /* L'image reste fixe lors du défilement */
-  width: 100%;                     /* Largeur pleine page */
-  height: 100vh;                   /* Hauteur pleine fenêtre */
-  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); /* Découpe l'image en fonction du chemin défini */
-  display: flex;                  /* Active Flexbox pour centrer les cartes */
-  justify-content: center;        /* Centre horizontalement */
-  align-items: center;            /* Centre verticalement */
+  background-size: cover;
+  /* L'image couvre toute la largeur et hauteur */
+  background-position: center;
+  /* Centre l'image */
+  background-repeat: no-repeat;
+  /* Empêche la répétition de l'image */
+  background-attachment: fixed;
+  /* L'image reste fixe lors du défilement */
+  width: 100%;
+  /* Largeur pleine page */
+  height: 100vh;
+  /* Hauteur pleine fenêtre */
+  display: flex;
+  /* Active Flexbox pour centrer les cartes */
+  justify-content: center;
+  /* Centre horizontalement */
+  align-items: center;
+  /* Centre verticalement */
+  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
 }
 
-.card{
-  height: 350px;
+@media (max-width: 992px) {
+  #background-cards {
+    height: 1350px;
+  }
+
+  .card {
+    margin-bottom: 60px;
+  }
 }
 
-.card-title{
+.card {
+  height: auto;
+}
+
+.card-title {
   padding-bottom: 20px;
 }
 
-.fa-solid{
+.fa-solid {
   font-size: 50px;
+}
+
+.pitch-presentation {
+  margin-top: 40px;
+}
+
+.img-equipement {
+  width: 500px;
+  height: 100%;
+  border-radius: 5%;
+  box-shadow: 15px 15px 4px rgba(128, 128, 128, 0.458);
+}
+
+@media (max-width: 992px) {
+.img-equipement {
+  margin-top: 50px;
+  width: 300px;
+  height: 100%;
+  border-radius: 5%;
+  box-shadow: 15px 15px 4px rgba(128, 128, 128, 0.458);
+}
+}
+
+.testimonials {
+  padding: 6rem 0 4rem 0;
+  /* On agrandit le padding pour créer plus d'espace pour le texte */
+  background-color: rgb(236, 236, 236);
+  text-align: center;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 1000%, 0% 100%);
+}
+
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Pour permettre le passage à la ligne si nécessaire */
+  gap: 1.5rem;
+  /* Espace entre les bulles */
+}
+
+.testimonial {
+  flex: 1 1 300px;
+  /* Chaque bulle prend un espace minimum de 300px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centre verticalement */
+}
+
+.bubble {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 300px;
+  /* Limite la largeur de chaque bulle */
+}
+
+.bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #fff;
+}
+
+#card-title {
+  padding-bottom: 2rem;
+}
+
+.stars {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.stars i {
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin-right: 0.25rem;
+}
+
+#comment {
+  margin-bottom: 0;
+}
+
+.author {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-style: italic;
+  color: #555;
+}
+
+.avis{
+  margin-top: 50px;
+}
+
+.appointment-section {
+  background-image: url('../images/equipement.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+}
+
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Overlay sombre */
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.fa-mobile-screen{
+  font-size: 1.5em;
+}
+
+.phone-number {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#doctolib{
+  margin-top: 30px;
+}
+
+#doctolib img {
+  height: 30px;
+  width: auto;
+}
+
+/* Ajustements pour les petits écrans */
+@media (max-width: 768px) {
+  .appointment-section {
+    height: 300px;
+  }
+
+.fa-mobile-screen{
+  font-size: 1.5em;
+}
+
+  .phone-number {
+    font-size: 1.2em;
+  }
+
+  .btn-doctolib img {
+    height: 40px;
+  }
+}
+
+
+#logo {
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+
+.py-4 {
+  background-color: #EAF4D3;
+}
+
+.table td, .table th {
+  background-color: transparent !important;
 }
