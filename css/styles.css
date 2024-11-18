@@ -1,3 +1,5 @@
+/* ----------------------HEADER---------------------- */
+
 .custom-navbar {
   background-color: white;
   /* backdrop-filter: blur(5px); */
@@ -13,24 +15,13 @@
   margin-right: 5px
 }
 
-@media (max-width: 992px) {
-
-  .navbar-collapse {
-    position: absolute;
-    /* Le menu déployé flotte au-dessus du contenu */
-    top: 100%;
-    /* Ajustement en fonction de la hauteur de la navbar */
-    background-color: white;
-  }
-}
-
 .navbar-brand {
   font-size: 3rem;
   letter-spacing: 3px;
 }
 
 .navbar-toggler {
-  margin-right: 10px; /* Ajuste cette valeur selon l'espacement souhaité */
+  margin-right: 10px;
 }
 
 #background-hero {
@@ -38,9 +29,9 @@
   background-attachment: fixed;
   width: auto;
   height: 800px;
-  background-image: 
-  linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-  url("../images/header.jpg");
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("../images/header.jpg");
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 100px;
   background-size: cover;
@@ -52,53 +43,77 @@
   align-items: center;
 }
 
-.color-1{
-  color:#5e9693;
+.color-1 {
+  color: #5e9693;
 }
 
-.color-2{
-  color:#2f97e6;
+.color-2 {
+  color: #2f97e6;
 }
 
-.green{
-  color:#5e9693;
-  text-shadow: 0px 0px 4px black; 
+.green {
+  color: #5e9693;
+  text-shadow: 0px 0px 4px black;
 }
 
-.blue{
-  color:#2f97e6;
-  text-shadow: 0px 0px 4px black ; 
+.blue {
+  color: #2f97e6;
+  text-shadow: 0px 0px 4px black;
 }
 
-#hero-main-title{
+.btn:hover {
+  transform: scale(1.1);
+}
+
+#hero-main-title {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  color:white;
+  color: white;
 }
 
-#hero-slogan{
+#hero-slogan {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
   font-weight: 900;
-  color:white;
-  text-transform:uppercase;
+  color: white;
+  text-transform: uppercase;
 }
 
-#hero-slogan-secondary{
-font-family: "Montserrat", Sans-serif;
-font-size: 20px;
-font-weight: 600;
-line-height: 1.6em;
-color:white;
+#hero-slogan-secondary {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6em;
+  color: white;
 }
 
-.img-hero{
+.img-hero {
   width: 400px;
   height: auto;
 }
+
+/* ----------------------HEADER MOBILE---------------------- */
+
+@media (max-width: 992px) {
+
+  .navbar-collapse {
+    position: absolute;
+    /* Le menu déployé flotte au-dessus du contenu */
+    top: 100%;
+    /* Ajustement en fonction de la hauteur de la navbar */
+    background-color: white;
+  }
+
+  .nav-link{
+    padding-left: 5px;
+  }
+}
+
+
+/* ----------------------INTRODUCTION---------------------- */
 
 #intro {
   margin-top: 40px;
@@ -111,13 +126,6 @@ color:white;
   border-left: 8px solid #2f97e6;
 }
 
-.card {
-  text-align: center;
-  border-radius: 20px;
-  border-top: 10px solid #2f97e6;
-  width: 80%;
-}
-
 p {
   margin-bottom: 30px;
 }
@@ -128,23 +136,25 @@ p {
   border-radius: 20px;
 }
 
+/* ----------------------INTRODUCTION MOBILE---------------------- */
+
 @media (max-width: 992px) {
- 
-  #hero-slogan{
-  font-size: 36px;
-  }
-  
-  .green{
-    color:#5e9693;
-    text-shadow: none; 
-  }
-  
-  .blue{
-    color:#2f97e6;
-    text-shadow: none ; 
+
+  #hero-slogan {
+    font-size: 36px;
   }
 
-  .img-hero{
+  .green {
+    color: #5e9693;
+    text-shadow: none;
+  }
+
+  .blue {
+    color: #2f97e6;
+    text-shadow: none;
+  }
+
+  .img-hero {
     width: 250px;
     height: auto;
   }
@@ -155,6 +165,7 @@ p {
   }
 }
 
+/* ----------------------CARDS AREA---------------------- */
 
 #background-cards {
   background-image: url('../images/paysage.avif');
@@ -179,18 +190,17 @@ p {
   clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
 }
 
-@media (max-width: 992px) {
-  #background-cards {
-    height: 1350px;
-  }
-
-  .card {
-    margin-bottom: 60px;
-  }
+.card {
+  text-align: center;
+  border-radius: 20px;
+  border-top: 10px solid #2f97e6;
+  width: 80%;
+  margin-bottom: 60px;
+  max-width: 100%;
 }
 
-.card {
-  height: auto;
+.cards-area {
+  margin-bottom: 100px;
 }
 
 .card-title {
@@ -200,6 +210,16 @@ p {
 .fa-solid {
   font-size: 50px;
 }
+
+/* ----------------------CARDS AREA MOBILE---------------------- */
+
+@media (max-width: 992px) {
+  #background-cards {
+    height: 1350px;
+  }
+}
+
+/* ----------------------PITCH-PRESENTATION---------------------- */
 
 .pitch-presentation {
   margin-top: 40px;
@@ -212,40 +232,25 @@ p {
   box-shadow: 15px 15px 4px rgba(128, 128, 128, 0.458);
 }
 
+/* ----------------------PITCH-PRESENTATION MOBILE---------------------- */
+
 @media (max-width: 992px) {
-.img-equipement {
-  margin-top: 50px;
-  width: 300px;
-  height: 100%;
-  border-radius: 5%;
-  box-shadow: 15px 15px 4px rgba(128, 128, 128, 0.458);
+  .img-equipement {
+    margin-top: 50px;
+    width: 300px;
+    height: 100%;
+    border-radius: 5%;
+    box-shadow: 15px 15px 4px rgba(128, 128, 128, 0.458);
+  }
 }
-}
+
+/* ----------------------TESTIMONIALS---------------------- */
 
 .testimonials {
   padding: 6rem 0 4rem 0;
-  /* On agrandit le padding pour créer plus d'espace pour le texte */
   background-color: rgb(236, 236, 236);
   text-align: center;
   clip-path: polygon(0% 10%, 100% 0%, 100% 1000%, 0% 100%);
-}
-
-.testimonials-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  /* Pour permettre le passage à la ligne si nécessaire */
-  gap: 1.5rem;
-  /* Espace entre les bulles */
-}
-
-.testimonial {
-  flex: 1 1 300px;
-  /* Chaque bulle prend un espace minimum de 300px */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Centre verticalement */
 }
 
 .bubble {
@@ -297,9 +302,11 @@ p {
   color: #555;
 }
 
-.avis{
+.avis {
   margin-top: 50px;
 }
+
+/* ----------------------APPOINTMENT---------------------- */
 
 .appointment-section {
   background-image: url('../images/equipement.jpg');
@@ -308,7 +315,6 @@ p {
   height: 400px;
   position: relative;
 }
-
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -324,7 +330,7 @@ p {
   color: white;
 }
 
-.fa-mobile-screen{
+.fa-mobile-screen {
   font-size: 1.5em;
 }
 
@@ -333,7 +339,7 @@ p {
   font-weight: bold;
 }
 
-#doctolib{
+#doctolib {
   margin-top: 30px;
 }
 
@@ -342,15 +348,16 @@ p {
   width: auto;
 }
 
-/* Ajustements pour les petits écrans */
+/* ----------------------APPOINTMENT MOBILE---------------------- */
+
 @media (max-width: 768px) {
   .appointment-section {
     height: 300px;
   }
 
-.fa-mobile-screen{
-  font-size: 1.5em;
-}
+  .fa-mobile-screen {
+    font-size: 1.5em;
+  }
 
   .phone-number {
     font-size: 1.2em;
@@ -361,17 +368,55 @@ p {
   }
 }
 
+/* ----------------------FOOTER---------------------- */
+
+footer {
+  background: linear-gradient(59deg, #3A6073, #16222A);
+  color: white;
+}
+
 
 #logo {
   font-size: 3rem;
   letter-spacing: 3px;
 }
 
-
-.py-4 {
-  background-color: #EAF4D3;
+#img-footer {
+  width: 250px;
+  height: auto;
 }
 
-.table td, .table th {
+#footer-title {
+  margin-bottom: 30px;
+  padding-left: 15px;
+  border-left: 4px solid #2f97e6;
+}
+
+.table td,
+.table th {
   background-color: transparent !important;
 }
+
+.fa-location-dot {
+  font-size: 1.5em;
+}
+
+.telephone {
+  padding-top: 10px;
+}
+
+.fa-mobile-screen-button {
+  font-size: 1.5em;
+}
+
+.fa-envelope {
+  font-size: 1.5em;
+}
+
+#copyright {
+  padding-top: 10px;
+  border-top: 1px solid white;
+}
+
+/* ----------------------FOOTER MOBILE---------------------- */
+
